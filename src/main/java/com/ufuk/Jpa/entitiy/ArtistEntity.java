@@ -1,20 +1,29 @@
-package com.ufuk.model;
+package com.ufuk.Jpa.entitiy;
 
 import com.ufuk.enums.Gender;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
 /**
- * Model for Artist
+ * Entity for Artist.
  */
-public class Artist
+@Entity
+public class ArtistEntity extends AbstractEntity implements Serializable
 {
     private String name;
     private String surname;
     private String address;
     private Date date;
     private Gender gender;
-    private Set<Album> albums;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    private Set<AlbumEntity> albumEntities;
 
     public String getName() {
         return name;
@@ -56,11 +65,11 @@ public class Artist
         this.gender = gender;
     }
 
-    public Set<Album> getAlbums() {
-        return albums;
+    public Set<AlbumEntity> getAlbumEntities() {
+        return albumEntities;
     }
 
-    public void setAlbums(Set<Album> albums) {
-        this.albums = albums;
+    public void setAlbumEntities(Set<AlbumEntity> albumEntities) {
+        this.albumEntities = albumEntities;
     }
 }

@@ -1,20 +1,21 @@
-package com.ufuk.model;
+package com.ufuk.controller.dto;
 
 import com.ufuk.enums.Gender;
+
 import java.util.Date;
 import java.util.Set;
 
 /**
- * Model for Artist
+ * Data Transfer Object for ArtistEntity.
  */
-public class Artist
+public class ArtistDto
 {
     private String name;
     private String surname;
     private String address;
     private Date date;
     private Gender gender;
-    private Set<Album> albums;
+    private Set<AlbumDto> albumDtos;
 
     public String getName() {
         return name;
@@ -56,11 +57,11 @@ public class Artist
         this.gender = gender;
     }
 
-    public Set<Album> getAlbums() {
-        return albums;
+    public Set<AlbumDto> getAlbums() {
+        return albumDtos;
     }
 
-    public void setAlbums(Set<Album> albums) {
-        this.albums = albums;
+    public void setAlbums(Set<AlbumDto> albumDtos) {
+        this.albumDtos = albumDtos;
     }
 }

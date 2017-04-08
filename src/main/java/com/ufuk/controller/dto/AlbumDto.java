@@ -1,11 +1,11 @@
-package com.ufuk.model;
+package com.ufuk.controller.dto;
 
 import java.util.Date;
 
 /**
- * Model for Album
+ * Data transfer object for Album.
  */
-public class Album
+public class AlbumDto
 {
     private String name;
     private Date date;
