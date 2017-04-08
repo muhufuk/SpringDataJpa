@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Set;
 
 /**
- * Data Transfer Object for ArtistEntity.
+ * Data Transfer Object for Artist.
  */
 public class ArtistDto
 {
