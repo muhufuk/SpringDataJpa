@@ -8,16 +8,16 @@ import javax.persistence.Entity;
 @Entity
 public class SongEntity extends AbstractEntity
 {
-    private int order;
+    private int trackOrder;
     private String songName;
     private int duration;
 
-    public int getOrder() {
-        return order;
+    public int getTrackOrder() {
+        return trackOrder;
     }
 
-    public void setOrder(int order) {
-        this.order = order;
+    public void setTrackOrder(int trackOrder) {
+        this.trackOrder = trackOrder;
     }
 
     public String getSongName() {

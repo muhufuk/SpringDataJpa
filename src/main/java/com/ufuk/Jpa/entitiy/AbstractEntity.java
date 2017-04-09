@@ -7,9 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
-/**
- * Created by Ufuk on 8.04.2017.
- */
 @MappedSuperclass
 public class AbstractEntity
 {

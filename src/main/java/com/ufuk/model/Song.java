@@ -9,6 +9,13 @@ public class Song
     private String songName;
     private int duration;
 
+    public Song(int order, String songName, int duration)
+    {
+        this.order = order;
+        this.songName = songName;
+        this.duration = duration;
+    }
+
     public int getOrder() {
         return order;
     }
